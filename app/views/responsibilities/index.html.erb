@@ -1,0 +1,10 @@
+<h1>Responsibilities</h1>
+
+<% @responsibilities.each do |resposibility| %>
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title"><%= resposibility.name.titleize %></span>
+        <%= resposibility.details %>
+      </div>
+    </div>
+<% end %>
