@@ -1,10 +1,13 @@
 <h1>Responsibilities</h1>
-<% count = 1  %>
-<% @responsibilities.each do |resposibility| %>
+<% count = 1 %>
+<% @responsibilities.each do |responsibility| %>
     <div class="card">
       <div class="card-content">
-        <span class="card-title"><%= count.to_s + '. ' + resposibility.name.titleize %></span>
-        <%= resposibility.details %>
+        <span class="card-title"><%= count.to_s + '. ' + responsibility.name.titleize %></span>
+        <%= responsibility.details %>
+        <div class="right-align">
+          <%= link_to 'Delete', (responsibility), method: :delete, class: 'waves-effect waves-light btn' %>
+        </div>
       </div>
     </div>
     <% count += 1 %>
