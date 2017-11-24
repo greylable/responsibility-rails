@@ -6,8 +6,10 @@
         <span class="card-title"><%= count.to_s + '. ' + responsibility.name.titleize %></span>
         <%= responsibility.details %>
         <div class="right-align">
+          <%= link_to 'Edit', edit_responsibility_path(responsibility), class: 'waves-effect waves-light btn' %>
           <%= link_to 'Delete', (responsibility), method: :delete, class: 'waves-effect waves-light btn' %>
         </div>
+
       </div>
     </div>
     <% count += 1 %>

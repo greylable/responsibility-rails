@@ -1,5 +1,5 @@
 class ResponsibilitiesController < ApplicationController
-  before_action :set_responsibility, only: [:destroy]
+  before_action :set_responsibility, only: [:destroy, :edit, :update]
   def index
     @responsibilities = current_user.responsibilities
   end
@@ -15,6 +15,17 @@ class ResponsibilitiesController < ApplicationController
       redirect_to responsibilities_path, notice: 'Responsibility Created Successfully!'
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @responsibility.update(responsibility_params)
+      redirect_to responsibilities_path, notice: 'Responsibility Updated Successfully!'
+    else
+      render :edit
     end
   end
 
