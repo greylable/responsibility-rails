@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title"><%= @responsibility.name.titleize %></span>
+    Details: <%= @responsibility.details.to_s %> <br>
+    Status: <%= @responsibility.status %> <br>
+    Start: <%= @responsibility.start_date&.to_date %> <br>
+    Deadline: <%= @responsibility.deadline&.to_date %>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class ResponsibilitiesController < ApplicationController
-  before_action :set_responsibility, only: [:destroy, :edit, :update]
+  before_action :set_responsibility, only: [:destroy, :edit, :update, :show]
   def index
     @responsibilities = current_user.responsibilities
   end
@@ -32,6 +32,9 @@ class ResponsibilitiesController < ApplicationController
   def destroy
     @responsibility.destroy
     redirect_to responsibilities_path, notice: 'Responsibility Deleted Successfully!'
+  end
+
+  def show
   end
 
   private
