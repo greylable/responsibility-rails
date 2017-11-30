@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ResponsibilityRails</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>ResponsibilityRails</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Responsibility</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to 'Responsibilities', responsibilities_path %></li>
-      </ul>
-    </div>
-  </nav>
-  <p class="notice"><%= notice %></p>
-    <%= yield %>
-  </body>
+<body>
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Responsibility</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to 'Responsibilities', responsibilities_path %></li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+    </ul>
+  </div>
+</nav>
+<p class="notice"><%= notice %></p>`
+<%= yield %>
+</body>
 
 </html>
