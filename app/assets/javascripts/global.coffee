@@ -1,14 +1,17 @@
-initialized = false
 $(document).on 'turbolinks:load', ->
-  if !initialized
     initializeAll()
 
 initializeAll = ->
   console.log 'initialized'
   initialized = true
-  Turbolinks.clearCache()
+
+  initializeModal()
+  initializeDatePicker()
+
+initializeModal = ->
   $('.modal').modal()
 
+initializeDatePicker = ->
   $('.datepicker').pickadate
     selectMonths: true
     selectYears: 15
@@ -17,5 +20,11 @@ initializeAll = ->
     close: 'Ok'
     closeOnSelect: false
 
+
+
 $(document).on 'click', '.modal-trigger', () ->
   console.log 'clicked'
+
+document.addEventListener 'turbolinks:before-cache', ->
+  $('.modal').modal()
+  return

@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Views
-gem 'materialize-sass'
+gem 'materialize-sass', '0.97.8'
 # Devise for login
 gem 'devise'
 # Simple Form

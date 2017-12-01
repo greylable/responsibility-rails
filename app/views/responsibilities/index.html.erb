@@ -8,7 +8,7 @@
         <div class="right-align">
           <%= link_to 'Show', responsibility, class: 'waves-effect waves-light btn' %>
           <%= link_to 'Edit', edit_responsibility_path(responsibility), class: 'waves-effect waves-light btn' %>
-          <button class="waves-effect waves-light btn modal-trigger" data-target="responsibility-delete-modal-<%= i %>">Delete</button>
+          <a class="waves-effect waves-light btn modal-trigger" href="#responsibility-delete-modal-<%= i %>" data-turbolinks="false">Delete</a>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
       </div>
       <div class="modal-footer">
         <%= link_to 'Yes', responsibility, method: :delete, class: 'waves-effect waves-light btn' %>
-        <%= button_tag 'No', class: 'modal-close waves-effect waves-light btn' %>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" data-turbolinks="false">No</a>
       </div>
     </div>
 <% end %>

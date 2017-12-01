@@ -80,7 +80,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    materialize-sass (0.100.2)
+    materialize-sass (0.97.8)
       sass (~> 3.3)
     method_source (0.9.0)
     mini_mime (1.0.0)
@@ -183,7 +183,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  materialize-sass
+  materialize-sass (= 0.97.8)
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.6)
