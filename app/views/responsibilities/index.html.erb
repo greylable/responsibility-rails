@@ -1,4 +1,5 @@
 <h1>Responsibilities</h1>
+<%= link_to('+ responsibility', new_responsibility_path, class: 'waves-effect waves-light btn') %>
 <% count = 1 %>
 <% @responsibilities.each_with_index do |responsibility, i| %>
     <div class="card">
@@ -25,4 +26,3 @@
     </div>
 <% end %>
 
-<%= link_to('+ responsibility', new_responsibility_path, class: 'waves-effect waves-light btn') %>

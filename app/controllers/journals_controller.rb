@@ -21,7 +21,7 @@ class JournalsController < ApplicationController
   end
 
   def update
-    if @journal.update(responsibility_params)
+    if @journal.update(journal_params)
       redirect_to journals_path, notice: 'Journal Updated Successfully!'
     else
       render :edit
