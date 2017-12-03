@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">#<%= @journal.id %></div>
+    <div class="card-title right-align"><%= @journal.created_at.strftime('%A, %B %d, %Y') %></div>
+    <span><h5>What happened today?</h5><%= @journal.cause %></span>
+    <span><h5>How are you related to it?</h5><%= @journal.effect %></span>
+    <span><h5>How did you feel?</h5><%= @journal.feeling %></span>
+  </div>
+  <div class="card-action">
+    <%= link_to 'back', :back %>
+  </div>
+</div>

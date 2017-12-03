@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cause: MyText
+  effect: MyText
+  feeling: MyText
+
+two:
+  cause: MyText
+  effect: MyText
+  feeling: MyText

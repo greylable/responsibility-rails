@@ -1,0 +1,31 @@
+<h1>Journals</h1>
+<% count = 1 %>
+<% @journals.each_with_index do |journal, i| %>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">#<%= count %></div>
+        <div class="card-title right-align"><%= journal.created_at.strftime('%A, %B %d, %Y') %></div>
+        <span><h5>What happened today?</h5><%= journal.cause.truncate_words(10) %></span>
+        <span><h5>How are you related to it?</h5><%= journal.effect.truncate_words(10) %></span>
+        <span><h5>How did you feel?</h5><%= journal.feeling.truncate_words(10) %></span>
+        <div class="right-align">
+          <%= link_to 'Show', journal, class: 'waves-effect waves-light btn' %>
+          <%= link_to 'Edit', edit_journal_path(journal), class: 'waves-effect waves-light btn' %>
+          <a class="waves-effect waves-light btn modal-trigger" href="#journal-delete-modal-<%= i %>" data-turbolinks="false">Delete</a>
+        </div>
+      </div>
+    </div>
+    <% count += 1 %>
+    <div id="journal-delete-modal-<%= i %>" class="modal">
+      <div class="modal-content">
+        <h4>Are you sure?</h4>
+        <p>This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to 'Yes', journal, method: :delete, class: 'modal-action modal-close waves-effect waves-light btn' %>
+        <button class="modal-action modal-close waves-effect waves-green btn-flat">No</button>
+      </div>
+    </div>
+<% end %>
+
+<%= link_to('+ journal', new_journal_path, class: 'waves-effect waves-light btn') %>
