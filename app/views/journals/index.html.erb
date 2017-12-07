@@ -1,5 +1,4 @@
 <h1>Journals</h1>
-<%= link_to('+ journal', new_journal_path, class: 'waves-effect waves-light btn') %>
 <% count = 1 %>
 <% @journals.each_with_index do |journal, i| %>
     <div class="card">
@@ -29,3 +28,8 @@
     </div>
 <% end %>
 
+<div class="fixed-action-btn">
+  <%= link_to(new_journal_path, class: 'btn-floating btn-large') do %>
+    <i class="large material-icons">add</i>
+  <% end %>
+</div>
