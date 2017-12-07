@@ -4,6 +4,7 @@ $(document).on 'turbolinks:load', ->
 initializeAll = ->
   initializeModal()
   initializeDatePicker()
+  $(".button-collapse").sideNav();
 
 initializeModal = ->
   $('.modal').modal()

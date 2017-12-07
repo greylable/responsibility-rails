@@ -6,21 +6,56 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 <nav>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo">Responsibility</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><%= link_to 'Journals', journals_path %></li>
-      <li><%= link_to 'Responsibilities', responsibilities_path %></li>
-      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+    <a href="/" class="brand-logo center">Responsibility</a>
+    <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only show-on-medium-and-down"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><%= link_to 'Journal', journals_path, class: 'waves-effect' %></li>
+      <li><%= link_to 'Responsibilities', responsibilities_path, class: 'waves-effect' %></li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
     </ul>
   </div>
 </nav>
-<p class="notice"><%= notice %></p>`
-<%= yield %>
-</body>
 
+<ul id="slide-out" class="side-nav">
+  <li>
+    <div class="user-view">
+      <div class="background">
+        <!--<img src="images/office.jpg">-->
+        Responsibility Logo
+      </div>
+      <a href="#!user">
+        <!--<img class="circle" src="images/yuna.jpg">-->
+        Profile Pict
+      </a>
+      <a href="#!name"><span class="white-text name">Username</span></a>
+      <a href="#!email"><span class="white-text email">Email</span></a>
+    </div>
+  </li>
+  <li>
+    <%= link_to(responsibilities_path, class: 'waves-effect') do %>
+      <i class="material-icons">cloud</i>Responsibilities
+    <% end %>
+  </li>
+  <li>
+    <%= link_to(responsibilities_path, class: 'waves-effect') do %>
+      <i class="material-icons">book</i>Journal
+    <% end %>
+  </li>
+  <li><a class="waves-effect" href="#!"><i class="material-icons">access_time</i>Pomodoro</a></li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
+</ul>
+<p class="notice"><%= notice %></p>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
 </html>
