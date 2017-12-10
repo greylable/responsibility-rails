@@ -4,15 +4,15 @@
       <div class="card-content">
         <span class="card-title">Journal details</span>
         <%= simple_form_for @journal do |f| %>
-            <%= f.input :cause, :label => "How are you feeling today?"%>
+            <%= f.input :cause, :label => "What happened today?"%>
             <%= f.input :effect, :label => "How are you related to it?"%>
             <%= f.input :feeling, :label => "How did you feel?"%>
-            <%= f.button :submit %>
+          <div class="card-action">
+            <%= link_to 'back', :back %>
+            <%= f.button :submit, class: 'right' %>
+          </div>
         <% end %>
       </div>
-    </div>
-    <div class="card-action">
-      <%= link_to 'back', :back %>
     </div>
   </div>
 </div>
