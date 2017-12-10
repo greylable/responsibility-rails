@@ -12,9 +12,9 @@
 <body>
 <nav>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo center">Responsibility</a>
-    <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only show-on-medium-and-down"><i class="material-icons">menu</i></a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    <a href="/" class="brand-logo left">Responsibility</a>
+    <a href="#" data-activates="slide-out" class="button-collapse right hide-on-large-only show-on-medium-and-down"><i class="material-icons right">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><%= link_to 'Journal', journals_path, class: 'waves-effect' %></li>
       <li><%= link_to 'Responsibilities', responsibilities_path, class: 'waves-effect' %></li>
       <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
