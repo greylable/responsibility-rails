@@ -1,1 +1,5 @@
-<h1>Welcome <%= @user %></h1>
+<% if user_signed_in? %>
+  <h1>Welcome <%= @user %></h1>
+<% else %>
+  <h1>Hello, welcome to responsibilities app! Lets get started!</h1>
+<% end %>
