@@ -19,3 +19,4 @@ initializeDatePicker = ->
     clear: 'Clear'
     close: 'Ok'
     closeOnSelect: false
+

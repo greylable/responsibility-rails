@@ -17,9 +17,10 @@
       <a href="#" data-activates="slide-out" class="button-collapse right hide-on-large-only show-on-medium-and-down"><i class="material-icons right">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if user_signed_in? %>
-        <li><%= link_to 'Journal', journals_path, class: 'waves-effect' %></li>
-        <li><%= link_to 'Responsibilities', responsibilities_path, class: 'waves-effect' %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
+            <li><%= link_to 'Pomodoro', timeblocks_path, class: 'waves-effect' %></li>
+            <li><%= link_to 'Journal', journals_path, class: 'waves-effect' %></li>
+            <li><%= link_to 'Responsibilities', responsibilities_path, class: 'waves-effect' %></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
         <% else %>
             <li><%= link_to 'Login', new_user_session_path %></li>
         <% end %>
