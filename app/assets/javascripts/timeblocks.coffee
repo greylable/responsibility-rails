@@ -22,12 +22,15 @@ pomodoroTimer = ->
 
   # Set blocks
   numberOfBlocks = minutesSinceMidnight(new Date) / 10
-  block = numberOfBlocks + 1
+  numberOfFilledBlocks = (Math.floor(numberOfBlocks) - 1) > 0 ? Math.floor(numberOfBlocks) - 1 : 0
   partialBlock = Math.floor(numberOfBlocks % 1 * 10) / 10
 
+  console.log numberOfBlocks
+
+
   # Set height of filled blocks
-  for i in [0.. numberOfBlocks]
+  for i in [0.. numberOfFilledBlocks]
     $("#time-block-#{i}").css('height', '100px')
 
   # Set height of partial block
-  $("#time-block-#{Math.floor(numberOfBlocks) + 1}").css('height', "#{ 100 * partialBlock }px")
+  $("#time-block-#{Math.floor(numberOfFilledBlocks + 1)}").css('height', "#{ 100 * partialBlock }px")
