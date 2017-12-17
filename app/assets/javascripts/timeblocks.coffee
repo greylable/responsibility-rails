@@ -25,9 +25,6 @@ pomodoroTimer = ->
   numberOfFilledBlocks = (Math.floor(numberOfBlocks) - 1) > 0 ? Math.floor(numberOfBlocks) - 1 : 0
   partialBlock = Math.floor(numberOfBlocks % 1 * 10) / 10
 
-  console.log numberOfBlocks
-
-
   # Set height of filled blocks
   for i in [0.. numberOfFilledBlocks]
     $("#time-block-#{i}").css('height', '100px')
