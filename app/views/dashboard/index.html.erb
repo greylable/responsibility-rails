@@ -1,6 +1,7 @@
 <% if user_signed_in? %>
-  <h1>Welcome <%= @user %></h1>
-  <div class="block" style="background-color: red; height: 10px;"></div>
+  <h1>Welcome <%= @user.email %>!</h1>
 <% else %>
-  <h1>Hello, welcome to responsibilities app. Lets get started!</h1>
+  <h1>Hello, welcome to assisty!</h1>
+  <p>Sign in to start improving your life!</p>
+  <p>Or contact us @ spclight@gmail.com</p>
 <% end %>
