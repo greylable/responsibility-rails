@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'dashboard/index'
 
-  resources :responsibilities, :journals, :timeblocks
+  resources :responsibilities, :journals, :timeblocks, :goals
 
   root 'dashboard#index'
 

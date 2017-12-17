@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :responsibilities
   has_many :journals
+  has_many :goals
 end

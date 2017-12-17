@@ -1,0 +1,31 @@
+<h1>Goals</h1>
+<% count = 1 %>
+<% @goals.each_with_index do |goal, i| %>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title"><%= count.to_s + '. ' + goal.title.titleize%></div>
+        <span><h5>Achieve By</h5><%= goal.deadline %></span>
+        <div class="right-align">
+          <%= link_to 'Show', goal, class: 'waves-effect waves-light btn' %>
+          <%= link_to 'Edit', edit_goal_path(goal), class: 'waves-effect waves-light btn' %>
+          <a class="waves-effect waves-light btn modal-trigger" href="#goal-delete-modal-<%= i %>" data-turbolinks="false">Delete</a>
+        </div>
+      </div>
+    </div>
+    <% count += 1 %>
+    <div id="goal-delete-modal-<%= i %>" class="modal">
+      <div class="modal-content">
+        <h4>Are you sure?</h4>
+        <p>This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to 'Yes', goal, method: :delete, class: 'modal-action modal-close waves-effect waves-light btn' %>
+        <button class="modal-action modal-close waves-effect waves-green btn-flat">No</button>
+      </div>
+    </div>
+<% end %>
+<div class="fixed-action-btn">
+  <%= link_to(new_goal_path, class: 'btn-floating btn-large') do %>
+      <i class="large material-icons">add</i>
+  <% end %>
+</div>
