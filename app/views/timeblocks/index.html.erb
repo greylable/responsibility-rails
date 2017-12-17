@@ -1,3 +1,10 @@
-<h1>Pomodoro Timer</h1>
-<div class="waves-effect waves-light btn " id= "startClock">START</div>
-<div class="waves-effect red lighten-1 btn">PAUSE</div>
+<h1>Pomodoro</h1>
+<!--<div class="waves-effect waves-light btn " id= "startClock">START</div>-->
+<!--<div class="waves-effect red lighten-1 btn">PAUSE</div>-->
+<h4 id="pomodoro-timer"></h4>
+<div>
+  <% @total_blocks.times do |block| %>
+    <div id="time-block-<%= block.to_s %>" class="time-block red" style="height: 0px;">
+    </div>
+  <% end %>
+</div>
