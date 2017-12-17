@@ -12,25 +12,25 @@
 <body>
 <nav>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo left" style="margin: 5px;">
-      <%= image_tag('app_logo.png') %>
+    <a href="/" class="brand-logo left">
+      <%= image_tag('app_logo_white.png') %>
     </a>
 
-      <a href="#" data-activates="slide-out" class="button-collapse right hide-on-large-only show-on-medium-and-down"><i class="material-icons right">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <% if user_signed_in? %>
-            <li><%= link_to 'Pomodoro', timeblocks_path, class: 'waves-effect' %></li>
-            <li><%= link_to 'Journal', journals_path, class: 'waves-effect' %></li>
-            <li><%= link_to 'Responsibilities', responsibilities_path, class: 'waves-effect' %></li>
-            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
-        <% else %>
-            <li><%= link_to 'Login', new_user_session_path %></li>
-        <% end %>
-      </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse right hide-on-large-only show-on-medium-and-down"><i class="material-icons right">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if user_signed_in? %>
+        <li><%= link_to 'Pomodoro', timeblocks_path, class: 'waves-effect' %></li>
+        <li><%= link_to 'Journal', journals_path, class: 'waves-effect' %></li>
+        <li><%= link_to 'Responsibilities', responsibilities_path, class: 'waves-effect' %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
+      <% else %>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+      <% end %>
+    </ul>
   </div>
 </nav>
 
-<ul id="slide-out" class="side-nav center">
+<ul id="slide-out" class="side-nav">
   <% if user_signed_in? %>
     <li>
       <div class="user-view">
@@ -61,7 +61,7 @@
     </li>
     <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect' %></li>
   <% else %>
-      <li><%= link_to 'Login', new_user_session_path %></li>
+    <li><%= link_to 'Login', new_user_session_path %></li>
   <% end %>
 </ul>
 <p class="notice"><%= notice %></p>
