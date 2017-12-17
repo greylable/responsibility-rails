@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: responsibility-rails_production
-  username: responsibility-rails
+  username: responsibility
   password: <%= ENV['RESPONSIBILITY-RAILS_DATABASE_PASSWORD'] %>
