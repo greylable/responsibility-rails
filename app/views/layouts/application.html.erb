@@ -51,11 +51,15 @@
       <% end %>
     </li>
     <li>
-      <%= link_to(responsibilities_path, class: 'waves-effect') do %>
+      <%= link_to(journals_path, class: 'waves-effect') do %>
         <i class="material-icons">book</i>Journal
       <% end %>
     </li>
-    <li><a class="waves-effect" href="#!"><i class="material-icons">access_time</i>Pomodoro</a></li>
+    <li>
+      <%= link_to(timeblocks_path, class: 'waves-effect') do %>
+        <i class="material-icons">access_time</i>Pomodoro
+      <% end %>
+    </li>
     <li>
       <div class="divider"></div>
     </li>

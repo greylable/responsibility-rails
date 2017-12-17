@@ -22,7 +22,9 @@ pomodoroTimer = ->
 
   # Set blocks
   numberOfBlocks = minutesSinceMidnight(new Date) / 10
-  numberOfFilledBlocks = (Math.floor(numberOfBlocks) - 1) > 0 ? Math.floor(numberOfBlocks) - 1 : 0
+  numberOfFilledBlocks = (Math.floor(numberOfBlocks) - 1)
+  if numberOfFilledBlocks < 0
+    numberOfFilledBlocks = 0
   partialBlock = Math.floor(numberOfBlocks % 1 * 10) / 10
 
   # Set height of filled blocks
