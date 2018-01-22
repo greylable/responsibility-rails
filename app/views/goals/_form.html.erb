@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Goal details</span>
+        <%= simple_form_for @goal do |f| %>
+            <%= f.input :title%>
+            <%= f.text_field :deadline, class: 'datepicker', placeholder: 'Achieve By'%>
+            <div class="card-action">
+              <%= link_to 'back', :back %>
+              <%= f.button :submit, class: 'right' %>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
