@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   get 'dashboard/index'
 
-  resources :responsibilities, :journals, :timeblocks
+  resources :responsibilities do
+    member do
+      get :complete
+    end
+  end
+  resources :journals
+  resources :timeblocks
 
   root 'dashboard#index'
 
