@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title"><%= count.to_s + '. ' + responsibility.name.titleize %></span><br>
+    <%= responsibility.details %>
+    <div class="right-align">
+      <%= link_to 'Show', responsibility, class: 'waves-effect waves-light btn' %>
+      <% unless responsibility.status == 'Completed' %>
+        <%= link_to 'Complete', complete_responsibility_path(responsibility), class: 'waves-effect waves-light btn' %>
+      <% end %>
+      <%= link_to 'Edit', edit_responsibility_path(responsibility), class: 'waves-effect waves-light btn' %>
+      <a class="waves-effect waves-light btn modal-trigger" href="#responsibility-delete-modal-<%= i %>" data-turbolinks="false">Delete</a>
+    </div>
+  </div>
+</div>
+<div id="responsibility-delete-modal-<%= i %>" class="modal">
+  <div class="modal-content">
+    <h4>Are you sure?</h4>
+    <p>Have you fulfilled your responsibility?</p>
+  </div>
+  <div class="modal-footer">
+    <%= link_to 'Yes', responsibility, method: :delete, class: 'modal-action modal-close waves-effect waves-light btn' %>
+    <button class="modal-action modal-close waves-effect waves-green btn-flat">No</button>
+  </div>
+</div>

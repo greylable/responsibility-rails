@@ -2,6 +2,8 @@ class ResponsibilitiesController < ApplicationController
   before_action :set_responsibility, only: [:destroy, :edit, :update, :show, :complete]
   def index
     @responsibilities = current_user.responsibilities
+    @completed_responsibilities = current_user.responsibilities.where(status: 'Completed')
+    @incomplete_responsibilities = current_user.responsibilities.where.not(status: 'Completed')
   end
 
   def new
