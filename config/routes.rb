@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :journals
   resources :timeblocks
   resources :goals
+  resources :user_profile, controller: 'user_profile'
 
   root 'dashboard#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
