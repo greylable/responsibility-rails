@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-title"><%= @user.firstname.to_s + ' ' + @user.lastname.to_s %></div>
+    <div><%= @user.email.to_s %></div>
+
+    <%#= image_tag @user.avatar.url %>
+    <%#= image_tag @user.avatar.url(:medium) %>
+    <%= image_tag @user.avatar.url(:thumb) %>
+
+    <div class="right-align">
+      <%= link_to 'Edit', edit_user_profile_path(@user), class: 'waves-effect waves-light btn' %>
+    </div>
+
+  </div>
+</div>

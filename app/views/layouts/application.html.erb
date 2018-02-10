@@ -18,7 +18,7 @@
       <a href="#" data-activates="slide-out" class="button-collapse right hide-on-large-only show-on-medium-and-down"><i class="material-icons right">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if user_signed_in? %>
-            <li><%= link_to 'Profile', edit_user_profile_path(current_user), class: 'waves-effect' %></li>
+            <li><%= link_to 'Profile', user_profile_path(current_user), class: 'waves-effect' %></li>
             <li><%= link_to 'Goals', goals_path, class: 'waves-effect' %></li>
             <li><%= link_to 'Pomodoro', timeblocks_path, class: 'waves-effect' %></li>
             <li><%= link_to 'Journals', journals_path, class: 'waves-effect' %></li>
@@ -47,7 +47,7 @@
       </div>
     </li>
     <li>
-      <%=link_to(edit_user_profile_path(current_user), class: 'waves-effect') do %>
+      <%=link_to(user_profile_path(current_user), class: 'waves-effect') do %>
         <i class="material-icons">cloud</i>Profile
       <% end %>
     </li>

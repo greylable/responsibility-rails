@@ -12,6 +12,9 @@ gem 'devise'
 # Simple Form
 gem 'simple_form'
 
+# Uploader for files
+gem "paperclip", "~> 5.2.1"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
